@@ -1,8 +1,12 @@
 applications:
-- name: Kitura-Starter
+- path: .
   memory: 256M
   instances: 1
-  random-route: true
+  domain: mybluemix.net
+  name: minaapp
+  host: minaapp
   disk_quota: 1024M
-  command: Kitura-Starter
+  services:
+  - availability-monitoring-auto
   buildpack: swift_buildpack
+  command: Kitura-Starter
